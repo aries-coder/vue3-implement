@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // 设置输出的目标 JavaScript 版本，es2016 表示编译后的代码将符合 ES2016 规范
+    "target": "es2016",
+
+    // 指定编译后文件的输出目录，所有编译后的文件将输出到 dist 文件夹
+    "outDir": "dist",
+
+    // 是否生成源码映射文件，设置为 "true" 将生成 .map 文件
+    "sourceMap": true,
+
+    // 设置模块系统为 ESNext，表示使用最新的 ES 模块（import/export）语法
+    "module": "ESNext",
+
+    // 模块解析策略，"node" 表示按照 Node.js 的规则解析模块
+    "moduleResolution": "node",
+
+    // 是否启用严格模式，严格模式下会开启更多的类型检查，设为 false 禁用
+    "strict": false,
+
+    // 允许导入 JSON 文件作为模块
+    "resolveJsonModule": true,
+
+    // 启用 ES 模块和 CommonJS 模块之间的互操作性，允许默认导入 CommonJS 模块
+    "esModuleInterop": true,
+
+    // 设置 JSX 的转换方式，"preserve" 表示保留 JSX 不做转换，通常用于与 Babel 配合使用
+    "jsx": "preserve",
+
+    // 设置需要包含的库类型，这里包括了最新的 ECMAScript 库（ESNext）和浏览器的 DOM 库
+    "lib": ["ESNext", "DOM"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@vue/*": ["./packages/*/src"]
+    }
+  }
+}

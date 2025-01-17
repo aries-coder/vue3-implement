@@ -1,0 +1,14 @@
+{
+  "name": "@vue/shared",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "module": "dist/reactivity.esm-bundler.js",
+  "buildOptions": {
+    "formats": [
+      "esm-bundler",
+      "esm-browser",
+      "global",
+      "cjs"
+    ]
+  }
+}
