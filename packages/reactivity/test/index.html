@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+
+  <script type="module">
+    import { reactive, effect } from '../dist/reactivity.js'
+
+    const obj = reactive({
+      name: '张三',
+      age: 18
+    })
+    
+    effect(() => {
+      document.body.innerText = obj.name + obj.age
+      effect(() => {
+        obj.age
+      })
+      obj.name
+    })
+
+    setTimeout(() => {
+      obj.age
+    }, 1000);
+    
+    
+  </script>
+</body>
+</html>
